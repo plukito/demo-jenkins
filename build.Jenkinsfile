@@ -9,14 +9,13 @@ pipeline {
     }
 
     parameters {
-        string name: "REGISTRY", defaultValue: "principal", description: "Repository name"
+        string name: "REGISTRY", defaultValue: "demo-backend", description: "Repository name"
         gitParameter defaultValue: 'latest',
                      name: 'VERSION',
                      type: 'PT_TAG',
                      description: 'Version to be built to dockerhub',
                      selectedValue: 'TOP',
                      sortMode: 'DESCENDING_SMART',
-                     useRepository: 'customer'
     }
     
     stages {
@@ -31,7 +30,7 @@ pipeline {
                             extensions: [], 
                             gitTool: 'Default', 
                             submoduleCfg: [], 
-                            userRemoteConfigs: [[url: gitRepository, name: 'customer', credentialsId: 'GIT_CREDENTIAL']]
+                            userRemoteConfigs: [[url: gitRepository, name: 'origin', credentialsId: 'GIT_CREDENTIAL']]
                         ])
                     }
                 }
