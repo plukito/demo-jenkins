@@ -1,5 +1,9 @@
 pipeline {
 
+    agent {
+        
+    }
+
     environment {
         dockerImage = null
     }
