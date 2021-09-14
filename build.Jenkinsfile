@@ -15,7 +15,7 @@ pipeline {
                      type: 'PT_TAG',
                      description: 'Version to be built to dockerhub',
                      selectedValue: 'TOP',
-                     sortMode: 'DESCENDING_SMART',
+                     sortMode: 'DESCENDING_SMART'
     }
     
     stages {
